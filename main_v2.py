@@ -18,3 +18,7 @@ def get_user_numbers():
         except ValueError:
             print("Please enter a valid number.")
     return sorted(numbers)    
+
+
+def compare_numbers(drawn, user):
+    return len(frozenset(drawn) & frozenset(user)), frozenset(drawn) & frozenset(user)
